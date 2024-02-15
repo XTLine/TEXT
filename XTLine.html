@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学习窗口</title>
+    <style>
+        body {
+            background: black url('https://example.com/star-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #加上一个日期显示
+        
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<p id="demo" style ='color: rgb(96, 194, 130)'></p>
+
+<script>
+function updateTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();
+    document.getElementById("demo").innerHTML = hours + ":" + minutes + ":" + seconds;
+}
+
+// 更新时间，然后每秒更新一次
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+
+    <h1>欢迎来到学习窗口</h1>
+    <p>这是一个专为学习者设计的平台。</p>
+</body>
+</html>
